@@ -1,0 +1,1 @@
+export type alerttype = "alert-wearrper" | "alert-wearrper-1"|"alert-wearrper-12"

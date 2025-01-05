@@ -1,0 +1,60 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+$color: rgb(190, 60, 60);
+$border-color : rgb(168, 94, 94) ;
+$bgcolor: rgb(223, 214, 214);
+//*f2
+$color-1: rgb(250, 225, 225);
+$border-color-1: rgb(138, 92, 92) ;
+$bgcolor-1: rgb(15, 9, 9);
+//
+$color-2: rgb(183, 151, 151);
+$border-color-2: rgb(138, 92, 92) ;
+$bgcolor-2: rgb(15, 9, 9);
+@mixin func($name, $bgcolor, $border-color, $color) {
+    .#{$name} {
+      margin: 50px 100px;
+      background-color: $bgcolor;
+  
+      .title {
+        margin-left: 0.5rem;
+      }
+  
+      color: $color;
+  
+      .x {
+        font-size: 20px;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+  
+      .pp {
+        font-size: 1rem;
+      }
+  
+      border: 3px dotted $border-color;
+      padding: 15px;
+  
+      .alert-header {
+        display: flex;
+        justify-content: space-between;
+  
+        .alert-title {
+          padding: 5px;
+          display: flex;
+          align-items: center;
+        }
+        a{
+            color: black
+        }
+      }
+    }
+  }
+  
+
+@include func("alert-wearrper",$bgcolor ,$border-color ,$color ) ;
+@include func("alert-wearrper-1",$bgcolor-1 ,$border-color-1 ,$color-1 ) ;
+@include func("alert-wearrper-12",$bgcolor-2 ,$border-color-2 ,$color-2 ) ;
